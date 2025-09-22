@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function SectionFive() {
     return (
         // Section five start here
-        <section className="section-fifth w-full overflow-hidden">
-            <div className="section-fifth-div w-full -rotate-9 bg-white overflow-hidden">
-                <div className="section-fifth-div-1 flex m-auto rotate-9 pt-23">
-                    <div className="pl-4 flex-1">
+        <section className="section-fifth w-full overflow-hidden 320:h-full 320:mt-20 320:relative">
+            <div className="section-fifth-div w-full md:-rotate-9 320:-rotate-5 bg-white overflow-hidden 320:left-[-5.5%] 320:top-[10%] z-10 410:w-p-overfull 410:mt-[150px]">
+                <div className="section-fifth-div-1 md:flex md:m-auto md:rotate-9 320:rotate-5 pt-23 320:w-4/5 320:ml-5">
+                    <div className="pl-4 lg:pl-6 xl:pl-12 flex-1">
                         <div className="w-full">
                             <h3 className="text-xl">06 -------- FAQ</h3>
                             <h1 className="text-3xl">Do you have any Questions</h1>
@@ -57,17 +57,17 @@ export default function SectionFive() {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full h-44 pl-3">
-                            <button className="bg-green-500 w-28 h-10 ml-1 mt-2 rounded-2xl shadow-md shadow-black cursor-pointer">Get Started</button>
-                            <button className="bg-green-500 w-28 h-10 ml-2 mt-2 rounded-2xl shadow-md shadow-black cursor-pointer">Learn more</button>
+                        <div className="w-full md:h-44 pl-3">
+                            <button className="bg-green-500 320:w-20 370:w-30 md:w-28 h-10 ml-1 mt-2 rounded-2xl shadow-md shadow-black cursor-pointer">Get Started</button>
+                            <button className="bg-green-500 320:w-20 370:w-30 md:w-28 h-10 ml-2 mt-2 rounded-2xl shadow-md shadow-black cursor-pointer">Learn more</button>
                         </div>
                     </div>
-                    <div className="ml-5 flex-1">
-                        <Image src="image1.png" alt="Image" className="w-full h-full object-contain" />
+                    <div className="ml-5 flex-1 md:flex md:justify-center md:items-center 320:pt-5 320:pl-[30px]">
+                        <Image src="/image1.png" alt="Image" width={100} height={100} className="md:w-full md:h-full 320:w-p-300" />
                     </div>
                 </div>
             </div>
-            <div className="h-full w-full bg-white"></div>
+            <div className="md:h-full w-full bg-white 320:h-p-300 320:absolute 320:bottom-[-1%]"></div>
 
         </section>
         // Section five end here

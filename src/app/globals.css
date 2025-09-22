@@ -1,16 +1,64 @@
 @import "tailwindcss";
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root {
+  --bg1: url("/bg1.jpg") no-repeat center fixed;
+  --bg2: url("/bg2.jpg") no-repeat center fixed;
+  --bg3: url("/bg3.jpg") no-repeat center fixed;
+  --font-1: "Cormorant Garamond", "sans-serif";
+  --font-2: "Dancing Script", "sans-serif";
+  --font-3: "Epunda-Slab", "sans-serif";
+  --font-4: "Karla", "sans-serif";
+  --font-5: "Roboto", "sans-serif";
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+@theme {
+  /* Personal tailwind Custom start here */
+
+  --size-p-85: 85px;
+  --size-p-90: 90%;
+  --size-p-100: 100px;
+  --size-p-200: 200px;
+  --size-p-250: 250px;
+  --size-p-300: 300px;
+  --size-p-400: 400px;
+  --size-p-700: 700px;
+  --size-p-800: 800px;
+  --size-p-900: 900px;
+  --size-p-950: 950px;
+  --size-p-1000: 1000px;
+  --size-p-1100: 1100px;
+  --size-p-1200: 1200px;
+  --size-p-1350: 1350px;
+  --size-p-overfull: 105%;
+
+
+
+  --text-small-14: 14px;
+  --text-small-15: 15px;
+  --text-small-18: 17px;
+  --text-small-18: 18px;
+  --text-small-19: 19px;
+  --text-small-20: 20px;
+  --text-small-25: 25px;
+  --text-small-27: 27px;
+  --text-small-40: 40px;
+
+
+
+  --radius-p-inherit: inherit;
+  --radius-p-50: 50%;
+  /* Personal tailwind Custom ends here */
+
+
+
+   --breakpoint-320: 320px;  
+   --breakpoint-370: 370px;
+   --breakpoint-410: 410px;
+   --breakpoint-2xl: 100rem;  
+   --breakpoint-3xl: 120rem;
 }
+  /*
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -24,3 +72,8 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 } */
+
+
+.nav1, .nav2 {
+    background: linear-gradient(to right, #3A1C71, #8f68ff, #EDDD53, #8f68ff, #2A7B9B);
+}
