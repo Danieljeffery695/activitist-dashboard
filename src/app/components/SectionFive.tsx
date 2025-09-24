@@ -5,7 +5,7 @@ export default function SectionFive() {
         // Section five start here
         <section className="section-fifth w-full overflow-hidden 320:h-full 320:mt-20 320:relative">
             <div className="section-fifth-div w-full md:-rotate-9 320:-rotate-5 bg-white overflow-hidden 320:left-[-5.5%] 320:top-[10%] z-10 410:w-p-overfull 410:mt-[150px]">
-                <div className="section-fifth-div-1 md:flex md:m-auto md:rotate-9 320:rotate-5 pt-23 320:w-4/5 320:ml-5">
+                <div className="section-fifth-div-1 md:flex md:m-auto md:rotate-9 320:rotate-5 pt-23 320:w-4/5 320:ml-5 410:w-[85%] 540:ml-[50px] xl:justify-between">
                     <div className="pl-4 lg:pl-6 xl:pl-12 flex-1">
                         <div className="w-full">
                             <h3 className="text-xl">06 -------- FAQ</h3>
@@ -58,16 +58,16 @@ export default function SectionFive() {
                             </div>
                         </div>
                         <div className="w-full md:h-44 pl-3">
-                            <button className="bg-green-500 320:w-20 370:w-30 md:w-28 h-10 ml-1 mt-2 rounded-2xl shadow-md shadow-black cursor-pointer">Get Started</button>
-                            <button className="bg-green-500 320:w-20 370:w-30 md:w-28 h-10 ml-2 mt-2 rounded-2xl shadow-md shadow-black cursor-pointer">Learn more</button>
+                            <button className="bg-green-500 320:w-20 370:w-30 410:w-[130px] md:w-28 h-10 ml-1 mt-2 rounded-2xl shadow-md shadow-black cursor-pointer">Get Started</button>
+                            <button className="bg-green-500 320:w-20 370:w-30 410:w-[130px] md:w-28 h-10 ml-2 mt-2 rounded-2xl shadow-md shadow-black cursor-pointer">Learn more</button>
                         </div>
                     </div>
-                    <div className="ml-5 flex-1 md:flex md:justify-center md:items-center 320:pt-5 320:pl-[30px]">
+                    <div className="ml-5 flex-1 md:flex md:justify-center md:items-center 320:pt-5 320:pl-[30px] 540:flex 540:justify-center md:pl-0">
                         <Image src="/image1.png" alt="Image" width={100} height={100} className="md:w-full md:h-full 320:w-p-300" />
                     </div>
                 </div>
             </div>
-            <div className="md:h-full w-full bg-white 320:h-p-300 320:absolute 320:bottom-[-1%]"></div>
+            <div className="md:h-full w-full bg-white 320:h-p-300 320:absolute 320:bottom-[-1%] 410:top-[-10%] 540:h-[360px]"></div>
 
         </section>
         // Section five end here

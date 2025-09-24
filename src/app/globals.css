@@ -1,4 +1,5 @@
 @import "tailwindcss";
+/* @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
 
 :root {
   --bg1: url("/bg1.jpg") no-repeat center fixed;
@@ -6,7 +7,7 @@
   --bg3: url("/bg3.jpg") no-repeat center fixed;
   --font-1: "Cormorant Garamond", "sans-serif";
   --font-2: "Dancing Script", "sans-serif";
-  --font-3: "Epunda-Slab", "sans-serif";
+  --font-3: "Epunda-Slab", "Times";
   --font-4: "Karla", "sans-serif";
   --font-5: "Roboto", "sans-serif";
 }
@@ -15,22 +16,24 @@
 @theme {
   /* Personal tailwind Custom start here */
 
-  --size-p-85: 85px;
-  --size-p-90: 90%;
-  --size-p-100: 100px;
-  --size-p-200: 200px;
-  --size-p-250: 250px;
-  --size-p-300: 300px;
-  --size-p-400: 400px;
-  --size-p-700: 700px;
-  --size-p-800: 800px;
-  --size-p-900: 900px;
-  --size-p-950: 950px;
-  --size-p-1000: 1000px;
-  --size-p-1100: 1100px;
-  --size-p-1200: 1200px;
-  --size-p-1350: 1350px;
-  --size-p-overfull: 105%;
+  --spacing-85: 85px;
+  --spacing-90: 90%;
+  --spacing-100: 100px;
+  --spacing-200: 200px;
+  --spacing-250: 250px;
+  --spacing-300: 300px;
+  --spacing-370: 370px;
+  --spacing-380: 380px;
+  --spacing-400: 400px;
+  --spacing-700: 700px;
+  --spacing-800: 800px;
+  --spacing-900: 900px;
+  --spacing-950: 950px;
+  --spacing-1000: 1000px;
+  --spacing-1100: 1100px;
+  --spacing-1200: 1200px;
+  --spacing-1350: 1350px;
+  --spacing-overfull: 105%;
 
 
 
@@ -43,6 +46,7 @@
   --text-small-25: 25px;
   --text-small-27: 27px;
   --text-small-40: 40px;
+  --text-small-45: 45px;
 
 
 
@@ -55,8 +59,19 @@
    --breakpoint-320: 320px;  
    --breakpoint-370: 370px;
    --breakpoint-410: 410px;
-   --breakpoint-2xl: 100rem;  
-   --breakpoint-3xl: 120rem;
+   --breakpoint-540: 540px;
+
+   /* Personal font start here */
+
+ 
+    /* --font-karla: "Karla", sans-serif; */
+    /* --font-roboto: "Roboto", sans-serif; */
+    /* --font-dancing: "Dancing Script", sans-serif; */
+    /* --font-dancing: var(--font-myFont); */
+    /* --font-cormorant: "Cormorant Garamond", sans-serif; */
+    /* --font-epunda: "Epunda-Slab", sans-serif; */
+
+   /* Personal font ends here */
 }
   /*
 
@@ -72,6 +87,93 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 } */
+
+/* Default personal styling start here */
+
+/* @layer base {
+
+  button {
+    font-size: 15px; 
+    font-family: var(--font-1);
+    @apply font-cormorant;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-family: var(--font-3);
+    @apply font-cormorant;
+    font-weight: 800;
+    background: linear-gradient(to right, #57C785, #8f68ff, #EDDD53, #8f68ff, #2A7B9B);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+  }
+
+
+  p {
+    @apply font-cormorant text-lg;
+  }
+} */
+
+button {
+  /* font-family: "karla", sans-serif; */
+   /* font-family: "MyCustomFont", sans-serif; */
+  font-weight: 500;
+} 
+
+h1 {
+  /* font-family: var(--font-4); */
+  font-weight: 800;
+  background: linear-gradient(to right, #57C785, #8f68ff, #EDDD53, #8f68ff, #2A7B9B);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s linear infinite;
+}
+
+@keyframes animate-gradient {
+  to {
+    background-position: 200%;
+  }
+}
+
+h2, h3 {
+  font-family: var(--font-4);
+}
+
+a {
+  font-family: var(--font-3);
+  font-size: 20px;
+}
+
+p {
+  font-family: var(--font-3);
+}
+
+button:active {
+  transform: scale(0.5);
+}
+
+li {
+  font-family: var(--font-1);
+}
+
+input {
+  font-family: var(--font-2);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: var(--bg3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* Default personal styling ends here */
 
 
 .nav1, .nav2 {
