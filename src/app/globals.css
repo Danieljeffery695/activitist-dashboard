@@ -62,17 +62,7 @@
    --breakpoint-540: 540px;
    --breakpoint-850: 850px;
 
-   /* Personal font start here */
-
- 
-    /* --font-karla: "Karla", sans-serif; */
-    /* --font-roboto: "Roboto", sans-serif; */
-    /* --font-dancing: "Dancing Script", sans-serif; */
-    /* --font-dancing: var(--font-myFont); */
-    /* --font-cormorant: "Cormorant Garamond", sans-serif; */
-    /* --font-epunda: "Epunda-Slab", sans-serif; */
-
-   /* Personal font ends here */
+   
 }
   /*
 
@@ -174,7 +164,35 @@ body {
 
 /* Default personal styling ends here */
 
+/* Selective styling start here */
 
 .nav1, .nav2 {
     background: linear-gradient(to right, #3A1C71, #8f68ff, #EDDD53, #8f68ff, #2A7B9B);
 }
+
+.section-fourth-div-img1 {
+  border-radius: 50%;
+  animation: imageBoxShadow 3s linear infinite;
+}
+
+@keyframes imageBoxShadow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, .7), 0 0 0 0 rgba(255, 255, 255, .7);
+  }
+
+  40% {
+    box-shadow: 0 0 0 30px rgba(0, 0, 0, 0), 0 0 0 0 rgba(255, 255, 255, .7);
+
+  }
+
+  80% {
+    box-shadow: 0 0 0 30px rgba(0, 0, 0, 0), 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+}
+
+
+/* Selective styling ends here */
