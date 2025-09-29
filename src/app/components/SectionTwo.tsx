@@ -35,7 +35,7 @@ export default function SectionTwo() {
                     <p className={`text-xl ${epunda.className}`}>Immediate funding without third parties. Smart contracts autonomously perform funding payments.</p>
                 </div>
                 <div className="h-full pb-3 flex items-center justify-center cursor-pointer hover:bg-slate-500 hover:text-white bg-white p-3 rounded-md">
-                    <h1 className={`text-2xl ${cormorant.className} my-2`}>MORE FEATURES &#8594</h1>
+                    <h1 className={`text-2xl ${cormorant.className} my-2`}>MORE FEATURES &#8594;</h1>
                 </div>
             </div>
         </section>
