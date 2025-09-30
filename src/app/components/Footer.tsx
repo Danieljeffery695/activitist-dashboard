@@ -1,11 +1,12 @@
 // import Image from "next/image";
 import { cormorant, dancing } from "../layout";
+import FooterCanvas from "./FooterCanvasElement";
 
 export default function Footer() {
     return (
         // Footer start here
         <footer className="footer w-full border-t-2 border-t-slate-300 bg-white overflow-hidden relative 320:h-900 md:h-400">
-            <canvas id="footer-canvas" className="footer-canvas w-full h-full absolute"></canvas>
+            <FooterCanvas />
             <div className="w-full h-full flex md:items-center md:justify-between pt-10 320:flex-col md:flex-row lg:justify-center">
                 <div className="h-full pl-3 flex flex-col z-10 md:flex-1">
                     <div className="w-full h-20 flex">
