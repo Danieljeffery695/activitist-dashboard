@@ -2,7 +2,7 @@
 import { BezierCurve } from "../utils/Canvas";
 import { useEffect, useRef } from "react";
 
-function sectionFourCanvas(canvasElement: HTMLCanvasElement | null) {
+function canvasFunction(canvasElement: HTMLCanvasElement | null) {
     if (!canvasElement) return;
     const c = canvasElement.getContext("2d") as CanvasRenderingContext2D;
     canvasElement.width = window.innerWidth;
@@ -13,11 +13,11 @@ function sectionFourCanvas(canvasElement: HTMLCanvasElement | null) {
     testing1.draw(c, 0, canvasElement.height / 2);
 }
 
-export default function CanvasElement() {
+export default function SectionFourCanvas() {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     
     useEffect(() => {
-        sectionFourCanvas(canvasRef.current);
+        canvasFunction(canvasRef.current);
     }, []);
 
     return (

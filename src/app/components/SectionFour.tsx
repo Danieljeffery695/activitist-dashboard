@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { cormorant } from "../layout";
-import CanvasElement from "../utils/CanvasElement";
+import SectionFourCanvas from "./SectionFourCanvasElement";
 
 export default function SectionFour() {
     
     // Section Four start here
     return (
         <section className="section-fourth w-full bg-white rounded-b-4xl">
-            <CanvasElement/>
+            <SectionFourCanvas/>
             <div className="w-full text-center my-4">
                 <h3 className={`text-2xl ${cormorant.className} pb-2`}>04 -------- HOW IT WORKS</h3>
                 <h1 className={`text-3xl ${cormorant.className}`}>Let's Explain</h1>
