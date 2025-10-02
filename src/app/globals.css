@@ -155,10 +155,15 @@ input {
   /* font-family: var(--font-2); */
 }
 
-body {
+body {  
+  background: var(--bg3);
+}
+
+body::before {  /* Making the body a pseudo element so i can apply fixed to any components Especially the navigation component  */
+  content: "";
   width: 100%;
   height: 100%;
-  background: var(--bg3);
+  background: inherit;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
@@ -167,7 +172,7 @@ body {
 
 /* Selective styling start here */
 
-.nav1, .nav2 {
+.nav2 {
     background: linear-gradient(to right, #3A1C71, #8f68ff, #EDDD53, #8f68ff, #2A7B9B);
 }
 
