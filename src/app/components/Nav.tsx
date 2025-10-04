@@ -1,9 +1,33 @@
+"use client";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+
 
 export default function Nav() {
+  const [testing, setTesting] = useState<boolean | null> (false);
+  let lastScrollY: number = window.scrollY;
+
+  useEffect(() => {
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY: number = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+      // user is scrolling down
+      setTesting(true)
+      } else {
+        // User is scrolling up (optional)
+        setTesting(false)
+      }
+      
+      lastScrollY = currentScrollY; // update lastScrollY for the next comparison
+      
+    });
+  }, []);
+
   return (
     // Navigation start here
-    <nav className="nav2 fixed top-0 z-30 w-full h-16 flex items-center justify-between">
+    <nav className={`nav2 z-30 w-full flex items-center justify-between
+    ${testing ? 'absolute -top-[50%] h-0' : 'fixed h-20 top-0'} transition-all transition-discrete delay-500 duration-500 ease-in-out`}>
       <div className="flex-2 h-full">
         <Image src="/activities.png" alt="Logo" width={85} height={100} className="w-25 h-full ml-3 object-contain"/>
       </div>
