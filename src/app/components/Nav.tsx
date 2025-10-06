@@ -26,8 +26,8 @@ export default function Nav() {
 
   return (
     // Navigation start here
-    <nav className={`nav2 z-30 w-full flex items-center justify-between
-    ${testing ? 'absolute -top-[50%] h-0' : 'fixed h-20 top-0'} transition-all transition-discrete delay-500 duration-500 ease-in-out`}>
+    <nav className={`nav2 z-30 w-full flex items-center h-18 justify-between 
+    ${testing ? 'absolute -top-[50%] translate-y-[20px] opacity-0' : 'fixed top-0 translate-y-0 opacity-100'} transition-all transition-discrete delay-500 duration-500 ease-in-out`}>
       <div className="flex-2 h-full">
         <Image src="/activities.png" alt="Logo" width={85} height={100} className="w-25 h-full ml-3 object-contain"/>
       </div>
