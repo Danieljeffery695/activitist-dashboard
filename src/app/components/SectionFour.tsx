@@ -1,9 +1,20 @@
+"use client";
 import Image from "next/image";
-import { cormorant } from "../layout";
 import SectionFourCanvas from "./SectionFourCanvasElement";
+import Observer from "../utils/Observer";
+import { cormorant } from "../utils/Fonts";
+
 
 export default function SectionFour() {
+
+    //IntersectionObservers start here 
+
+    const {ref: myRef, inView: elementInPlace} = Observer(0, "100px", true);
+    const {ref: myRef1, inView: elementInPlace1} = Observer(0, "250px", true);
     
+    //IntersectionObservers start here 
+
+
     // Section Four start here
     return (
         <section className="section-fourth w-full bg-white rounded-b-4xl">
@@ -13,7 +24,8 @@ export default function SectionFour() {
                 <h1 className={`text-3xl ${cormorant.className}`}>Let's Explain</h1>
                 <h1 className={`text-3xl ${cormorant.className}`}>How We Do The Hard Work</h1>
             </div>
-            <div className="section-fourth-div w-full flex justify-center items-center">
+            <div ref={myRef1} className={`section-fourth-div w-full flex justify-center items-center 
+                 ${elementInPlace1 ? 'translate-y-0 opacity-100' : 'translate-y-[50%] opacity-0'} transition-all transition-discrete delay-400 duration-400 ease-in-out`}>
                 <div className="div-circle-3 flex items-center justify-center rounded-p-50 bg-slate-400 320:w-[310px] 320:h-[310px] 410:w-[350px] 410:h-[350px] 540:w-[420px] 540:h-[420px] md:w-[650px] md:h-[650px] xl:w-[800px] xl:h-[800px]">
 
                     <div className="div-circle-2 flex items-center justify-center relative rounded-p-50 bg-slate-500 320:w-[280px] 320:h-[280px] 410:w-[310px] 410:h-[310px] 540:w-[340px] 540:h-[340px] md:w-[500px] md:h-[500px] xl:w-[600px] xl:h-[600px]">
@@ -44,7 +56,7 @@ export default function SectionFour() {
                 </div>
             </div>
 
-            <div className="w-full h-80 text-center pt-15">
+            <div className={`w-full h-80 text-center pt-15 ${elementInPlace ? 'translate-y-0 opacity-100' : 'translate-y-[50%] opacity-0'} transition-all transition-discrete delay-400 duration-400 ease-in-out`} ref={myRef}>
                 <h1 className={`${cormorant.className} text-3xl`}>Our Amazing</h1>
                 <h1 className={`${cormorant.className} text-3xl`}>Clients & Partners</h1>
                 <div className="w-4/5 h-44 flex items-center justify-center m-auto">

@@ -1,18 +1,30 @@
+"use client";
 import Image from "next/image";
-import { cormorant, epunda } from "../layout";
+import { cormorant, epunda } from "../utils/Fonts";
+import Observer from "../utils/Observer";
 
 export default function SectionThree() {
+     //IntersectionObservers start here 
+          
+        const {ref: myRef, inView: elementInPlace} = Observer(0, "350px", true);
+        const {ref: myRef1, inView: elementInPlace1} = Observer(0, "-100px", true);
+          
+    //IntersectionObservers start here 
+
     // Section three start here
     return (
-        <section className="320:h-950 370:h-1000 410:w-overfull 410:h-1100 540:h-1200 w-full overflow-hidden relative section-third mt-1.5">
+        <section ref={myRef} className={`320:h-950 370:h-1000 410:w-overfull 410:h-1100 540:h-1200 w-full overflow-hidden relative section-third mt-1.5
+         ${elementInPlace ? 'translate-y-0 opacity-100' : 'translate-y-[50%] opacity-0'} transition-all transition-discrete delay-300 duration-400 ease-in-out`}>
             <div className="w-full section-third-div h-[90%] rounded-tl-[130px] relative md:rotate-9 320:rotate-7 bg-white overflow-hidden -mb-11 320:right-[-5%] 320:top-[8%] 320:z-10 410:right-[-2%]">
-                <div className="flex w-full h-full md:-rotate-9 320:flex-col 320:-rotate-7 md:flex-row">
+                <div ref={myRef1} className="flex w-full h-full md:-rotate-9 320:flex-col 320:-rotate-7 md:flex-row">
 
                     <div className="md:flex-2 lg:flex-1 320:w-4/5 320:m-auto h-4/5 320:-mt-14 370:-mt-0 370:h-6/12 540:h-full relative">
-                        <Image src="/image1.png" alt="Image" fill className=" z-20 md:-mt-14 object-contain" />
+                        <Image src="/image1.png" alt="Image" fill className={`z-20 md:-mt-14 object-contain
+                             ${elementInPlace1 ? 'translate-y-0 opacity-100' : 'translate-y-[50%] opacity-0'} transition-all transition-discrete delay-400 duration-500 ease-in-out`} />
                     </div>
 
-                    <div className="md:flex-3 lg:flex-1 320:h-full flex ml-6 flex-col justify-center">
+                    <div className={`md:flex-3 lg:flex-1 320:h-full flex ml-6 flex-col justify-center
+                         ${elementInPlace1 ? 'translate-y-0 opacity-100' : 'translate-y-[50%] opacity-0'} transition-all transition-discrete delay-500 duration-500 ease-in-out`}>
                         <div className="md:w-10/12 320:text-center">
                             <h3 className={`${cormorant.className} md:text-2xl pb-8 320:text-small-14 370:text-small-18 410:text-small-14`}>03 -------- Who Are We</h3>
                             <h1 className={`${cormorant.className} md:text-3xl 320:w-250 320:text-[22px] 320:m-auto 370:text-small-25 410:w-[310px] 410:text-small-27 540:w-4/5`}>Magical Technology to Make Your Money Secure</h1>

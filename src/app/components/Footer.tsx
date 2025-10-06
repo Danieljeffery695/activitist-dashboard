@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import { cormorant, dancing } from "../layout";
+import { cormorant, dancing } from "../utils/Fonts";
 import FooterCanvas from "./FooterCanvasElement";
 
 export default function Footer() {
