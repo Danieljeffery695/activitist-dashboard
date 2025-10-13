@@ -4,6 +4,16 @@ import SectionFourCanvas from "./SectionFourCanvasElement";
 import Observer from "../utils/Observer";
 import { cormorant } from "../utils/Fonts";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Imported Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+// import swiper required modules
+import { Autoplay } from 'swiper/modules';
+
 
 export default function SectionFour() {
 
@@ -14,6 +24,24 @@ export default function SectionFour() {
     
     //IntersectionObservers start here 
 
+    // Images Array start here
+    const images = [
+        "/image1.png",
+        "/image1.png",
+        "/image1.png",
+        "/image1.png",
+        "/image1.png",
+        "/image1.png",
+        "/image1.png",
+        "/image1.png",
+        "/image1.png",
+        "/image1.png",
+        "/image1.png",
+        "/image1.png",
+        "/image1.png",
+        "/image1.png",
+    ]
+    // Images Array ends here
 
     // Section Four start here
     return (
@@ -59,20 +87,25 @@ export default function SectionFour() {
             <div className={`w-full h-80 text-center pt-15 ${elementInPlace ? 'translate-y-0 opacity-100' : 'translate-y-[50%] opacity-0'} transition-all transition-discrete delay-400 duration-400 ease-in-out`} ref={myRef}>
                 <h1 className={`${cormorant.className} text-3xl`}>Our Amazing</h1>
                 <h1 className={`${cormorant.className} text-3xl`}>Clients & Partners</h1>
-                <div className="w-4/5 h-44 flex items-center justify-center m-auto">
-                    <div className="w-40 h-20 ml-2 flex justify-center">
-                        <Image src="/image1.png" width={20} height={100} alt="Image" className="w-20" /></div>
-                    <div className="w-40 h-20 ml-2 flex justify-center">
-                        <Image src="/image1.png" width={20} height={100} alt="Image" className="w-20" /></div>
-                    <div className="w-40 h-20 ml-2 flex justify-center">
-                        <Image src="/image1.png" width={20} height={100} alt="Image" className="w-20" /></div>
-                    <div className="w-40 h-20 ml-2 flex justify-center">
-                        <Image src="/image1.png" width={20} height={100} alt="Image" className="w-20" /></div>
-                    <div className="w-40 h-20 ml-2 flex justify-center">
-                        <Image src="/image1.png" width={20} height={100} alt="Image" className="w-20" /></div>
-                    <div className="w-40 h-20 ml-2 flex justify-center">
-                        <Image src="/image1.png" width={20} height={100} alt="Image" className="w-20" /></div>
-                </div>
+              
+                <Swiper
+                    spaceBetween={30}
+                    centeredSlides={true}
+                    autoplay={{
+                       delay: 2500,
+                       disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    slidesPerView={5}
+                    modules={[Autoplay]}
+                    className="mySwiper"
+                >
+                    {
+                        images.map((image, index) => 
+                            (<SwiperSlide key={index}>
+                            <Image src={image} alt="Image" width={100} height={100} className="mx-auto mt-10" /></SwiperSlide>))
+                        }
+            </Swiper>
             </div>
 
         </section>
