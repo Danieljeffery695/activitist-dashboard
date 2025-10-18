@@ -97,7 +97,7 @@ export default function Nav() {
                     </div>
 
                     <div className={`${navClicked ? 'w-full h-100 mt-5 translate-y-0 opacity-100' : 'opacity-0 translate-y-[80px]'}
-                     transition-all transition-discrete delay-800 duration-800 ease-linear`}>
+                     transition-all transition-discrete delay-800 duration-800 ease-in-out`}>
                       <div className="flex items-center mt-10 justify-center">
                         <div className="w-10 h-10 flex items-center justify-center rounded-lg border-slate-400 bg-green-700 text-white ml-2">
                           <DiCodeBadge/>

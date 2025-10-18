@@ -225,6 +225,13 @@ body::before {  /* Making the body a pseudo element so i can apply fixed to any 
   object-fit: contain;
 }
 
+/* Hide scrollbars on mobile */
+@media only screen and (max-width: 768px) {
+  * {
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;    /* IE & Edge */
+  }
+}
 
 /* swiper styling ends here */
 
